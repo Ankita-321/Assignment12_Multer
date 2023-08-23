@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+  <!-- <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      background-color: #555;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+    .logout {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+    }
+    .logout-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #fff;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+  </style> -->
+</head>
+<body>
+  <!-- <header>
+    <h1>Welcome to My Website</h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/contact">Contact</a>
+    <a href="/about">About</a>
+    <a href="/todo">Todo</a>
+  </nav> -->
+  
+  <!-- <div class="logout">
+    <p>Email ID:<%= username%></p>
+    <button><a href="/logout">Logout</a></button>
+  </div> -->
+  <%- include("component/header", {username:username}) %>
+
+  <section id="home">
+    <h2>Home Section</h2>
+    <p>This is the homepage content. You can put any relevant information here.</p>
+  </section>
+  <section id="contact">
+    <h2>Contact Section</h2>
+    <p>You can provide contact information and a contact form on this page.</p>
+  </section>
+  <section id="about">
+    <h2>About Section</h2>
+    <p>Share information about yourself or your company in this section.</p>
+  </section>
+  <section id="todo">
+    <h2>Todo Section</h2>
+    <p>List your todo items or tasks that need to be completed.</p>
+  </section>
+</body>
+</html>

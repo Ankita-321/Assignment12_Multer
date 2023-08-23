@@ -1,0 +1,15 @@
+<style>
+  img{
+   max-width: 20px;
+   max-height: 20px;
+ }
+</style>
+<% data.forEach(todo => { %>
+    <div style="text-align: center;">
+      <span><%= todo.todoText %></span>
+      <span><%= todo.priority %></span>
+      <input type="checkbox" id="<%= todo.id %>" <% if (todo.completed) { %>checked<% } %> onchange="updateStatus('<%= todo.id %>')">
+      <img src="/<%= todo.TodoPic %>" >
+      <button onclick="deleteTodo('<%= todo.id %>')">Delete</button>
+    </div>
+  <% }) %>

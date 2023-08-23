@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>About Us</title>
+
+ </head>
+ <body>
+   <%- include("component/header", {username:username}) %>
+ 
+   <section>
+     <h1>Welcome to the Todo</h1>
+     <div class="container">
+       <div class="input-container">
+        <h1>Enter your Todo and Priority here </h1>
+        <!-- <form class="Todo-form" action="/todo" method="POST" enctype="multipart/form-data">
+
+         <input id="userInput" placeholder="What to do?"/>
+         <select id="prioritySelector">
+           <option value="high">High</option>
+           <option value="medium">Medium</option>
+           <option value="low">Low</option>
+         </select>
+         <input type="file" id="TodoPic" name="TodoPic" required>
+         <button type="submit" id="submitTodo">Done?</button>
+        </form> -->
+        <form class="Todo-form" action="/todo" method="POST" enctype="multipart/form-data">
+          <input id="userInput" name="todoText" placeholder="What to do?" required /> <!-- Added name attribute -->
+          <select id="prioritySelector" name="priority" required> <!-- Added name attribute -->
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+          <input type="file" id="TodoPic" name="TodoPic" required />
+          <button type="submit" id="submitTodo">Done?</button>
+        </form>
+        
+       </div>
+       <div class="todos-container">
+         <!-- Render the todos here -->
+         <h1>The list of your todos </h1>
+         <%- include("data") %>
+       
+       </div>
+     </div>
+   </section>
+   
+   <script src="/scripts/todoScript.js"></script>
+ </body>
+ </html>
+ 
+
+

@@ -1,0 +1,121 @@
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      background-color: #555;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    section {
+      padding: 50px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content:  space-evenly;
+    }
+    .logout {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+    }
+    .logout-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #fff;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .contact-form label, .contact-form input, .contact-form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    .contact-form textarea {
+      resize: vertical;
+    }
+    .contact-form input[type="submit"] {
+      background-color: #555;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      width: auto;
+    }
+     
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+    .input-container {
+      flex: 1;
+     
+      box-sizing: border-box;
+      /* margin-left: 50px; */
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .todos-container {
+      flex: 1;
+      /* text-align: center; */
+      box-sizing: border-box;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    /* Adjust the padding to control the gap between the boxes */
+    @media screen and (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+      .input-container,
+      .todos-container {
+        padding: 10px; /* Adjust as needed */
+      }
+    }
+  
+     .logout img{
+      max-width: 60px;
+      max-height: 60px;
+     }
+  </style>
+
+<header>
+    <h1>Welcome to My Website</h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/contact">Contact</a>
+    <a href="/about">About</a>
+    <a href="/todo">Todo</a>
+  </nav>
+  <div class="logout">
+    <!-- <h2>Welcome to the Home Page</h2> -->
+    <p>Email ID:<%= username%></p>
+    
+    <button><a href="/logout">Logout</a></button>
+  </div>
